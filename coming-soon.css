@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #090249;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #090249;
+}
+
+body {
+  background-color: #000;
+  color: #e1e1e1;
+  font-family: "Source Code Pro", monospace;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  height: 100vh;
+}
+body section#coming-soon {
+  background: url("img/space-background.png"), linear-gradient(75.96deg, #000 0%, #444 100%) center no-repeat;
+  background-blend-mode: overlay, multiply, normal;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  /* Orbitas */
+  /* Esferas */
+}
+body section#coming-soon h1 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+body section#coming-soon a.arrow-link {
+  display: block;
+  margin-top: 8px;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 2;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+body section#coming-soon .orbitas {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+body section#coming-soon .orbitas::before {
+  content: "";
+  border-radius: 50%;
+  border-top: 2px solid #e1e1e1;
+  position: absolute;
+  clip-path: circle(73% at 50% -50%);
+  animation-name: spin, shine, change;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 0.4s ease-in-out 0s;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shine {
+  0% {
+    box-shadow: inset 0px 0px 2px #E1E1E1;
+  }
+  20% {
+    box-shadow: inset 0px 0px 5px #E1E1E1;
+  }
+  40% {
+    box-shadow: inset 0px 0px 8px #E1E1E1;
+  }
+  60% {
+    box-shadow: inset 0px 0px 10px #E1E1E1;
+  }
+  80% {
+    box-shadow: inset 0px 0px 8px #E1E1E1;
+  }
+  100% {
+    box-shadow: inset 0px 0px 5px #E1E1E1;
+  }
+}
+@keyframes change {
+  0% {
+    border-width: 1.5px;
+    opacity: 0;
+  }
+  5% {
+    border-width: 1.5px;
+    opacity: 0.05;
+  }
+  10% {
+    border-width: 1.8px;
+    opacity: 0.1;
+  }
+  20% {
+    border-width: 2px;
+    opacity: 0.3;
+  }
+  30% {
+    border-width: 2.2px;
+    opacity: 0.6;
+  }
+  40% {
+    border-width: 2.5px;
+    opacity: 0.8;
+  }
+  50% {
+    border-width: 2.8px;
+    opacity: 1;
+  }
+  60% {
+    border-width: 2.5px;
+    opacity: 0.8;
+  }
+  70% {
+    border-width: 2.2px;
+    opacity: 0.6;
+  }
+  80% {
+    border-width: 2px;
+    opacity: 0.3;
+  }
+  85% {
+    border-width: 2px;
+    opacity: 0.15;
+  }
+  90% {
+    border-width: 1.8px;
+    opacity: 0.1;
+  }
+  100% {
+    border-width: 1.5px;
+    opacity: 0;
+  }
+}
+body section#coming-soon .orbitas.orbita-uno {
+  width: 200px;
+  height: 200px;
+}
+body section#coming-soon .orbitas.orbita-uno::before {
+  width: 200px;
+  height: 200px;
+  animation-duration: 13s;
+}
+body section#coming-soon .orbitas.orbita-dos {
+  width: 260px;
+  height: 260px;
+}
+body section#coming-soon .orbitas.orbita-dos::before {
+  width: 260px;
+  height: 260px;
+  animation-name: spin, change;
+  animation-duration: 21s;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='260' ry='260' stroke='%23E1E1E1FF' stroke-width='6' stroke-dasharray='22%2c 13%2c 11%2c 24'  stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border: none;
+}
+body section#coming-soon .orbitas.orbita-tres {
+  width: 380px;
+  height: 380px;
+}
+body section#coming-soon .orbitas.orbita-tres::before {
+  width: 380px;
+  height: 380px;
+  animation-duration: 34s;
+}
+body section#coming-soon .orbitas.orbita-cuatro {
+  width: 500px;
+  height: 500px;
+}
+body section#coming-soon .orbitas.orbita-cuatro::before {
+  width: 500px;
+  height: 500px;
+  animation-name: spin, change;
+  animation-duration: 13s;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='520' ry='520' stroke='%23E1E1E1FF' stroke-width='6' stroke-dasharray='9%2c 14%2c 20%2c 10'   stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border: none;
+}
+body section#coming-soon .orbitas.orbita-cinco {
+  width: 590px;
+  height: 590px;
+}
+body section#coming-soon .orbitas.orbita-cinco::before {
+  width: 590px;
+  height: 590px;
+  animation-duration: 21s;
+}
+body section#coming-soon .esferas {
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  animation-name: fadeInOut;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+body section#coming-soon .esferas.esfera-uno {
+  width: 40px;
+  height: 40px;
+  bottom: -4.5%;
+  animation-duration: 5s;
+}
+body section#coming-soon .esferas.esfera-dos {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px solid #e1e1e1;
+  top: -3.5%;
+  animation-duration: 8s;
+}
+body section#coming-soon .esferas.esfera-tres {
+  bottom: -2.5%;
+  right: 34%;
+  animation-duration: 13s;
+}
+body section#coming-soon .esferas.esfera-cuatro {
+  bottom: 12.5%;
+  right: 10%;
+  animation-duration: 21s;
+}
+body section#coming-soon .esferas.esfera-cinco {
+  top: 20%;
+  right: 5%;
+  animation-duration: 13s;
+}
+body section#coming-soon .esferas.esfera-seis {
+  bottom: 3%;
+  left: 20%;
+  animation-duration: 8s;
+}
+body section#coming-soon .esferas.esfera-siete {
+  right: -1%;
+  top: 64%;
+  animation-duration: 5s;
+}
+body section#coming-soon .esferas.esfera-ocho {
+  width: 16px;
+  height: 16px;
+  bottom: 10%;
+  left: 8%;
+  background-color: transparent;
+  border: 4px solid #e1e1e1;
+  animation-duration: 3s;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body section#intro-text p {
+  text-align: center;
+  max-width: 1200px;
+}
+
+/*# sourceMappingURL=coming-soon.css.map */
